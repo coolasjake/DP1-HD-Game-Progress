@@ -11,6 +11,7 @@ public class RaycastMovement : MonoBehaviour
     public LayerMask mask;
     public float sensitivity = 1;
     public float clamp = 1;
+    public float moveSpeed = 0.1f;
     public static bool Paused = false;
     private float CameraAngle = 0;
     private Camera camera;
@@ -21,12 +22,6 @@ public class RaycastMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         camera = GetComponentInChildren<Camera>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
     }
 
     // Update is called once per frame
@@ -58,39 +53,37 @@ public class RaycastMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.BackQuote) || Input.GetKeyDown(KeyCode.Escape))
             Pause();
 
-        if (Input.GetKey(KeyCode.W))
-            desiredMotion += Vector3.forward;
-        if (Input.GetKey(KeyCode.A))
-            desiredMotion -= Vector3.right;
-        if (Input.GetKey(KeyCode.S))
-            desiredMotion -= Vector3.forward;
-        if (Input.GetKey(KeyCode.D))
-            desiredMotion += Vector3.right;
+        if (Paused)
+            return;
 
-        desiredRotation = Input.mousePosition;
+        if (Input.GetKey(KeyCode.W))
+            desiredMotion += transform.forward;
+        if (Input.GetKey(KeyCode.A))
+            desiredMotion -= transform.right;
+        if (Input.GetKey(KeyCode.S))
+            desiredMotion -= transform.forward;
+        if (Input.GetKey(KeyCode.D))
+            desiredMotion += transform.right;
+
+        desiredMotion.Normalize();
+
+        desiredRotation = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
     }
 
     private void DoCameraMovement()
     {
-
-        //CAMERA CONTROL
-        //Rotate player
-        float rotationX = Input.GetAxis("Mouse X") * sensitivity;
+        float rotationX = desiredRotation.x * sensitivity;
         transform.localRotation *= Quaternion.AngleAxis(rotationX, Vector3.up);
-
-        //CAMERA X-ROTATION
-        //Clamp the angle to a range of -180 to 180 for easier maths.
+        
         if (CameraAngle > 180 || CameraAngle < -180)
             CameraAngle = ClampAngleTo180(CameraAngle);
         
-        //Apply the mouse input.
-        CameraAngle -= Input.GetAxis("Mouse Y") * sensitivity;
-        //Clamp the angle.
+        CameraAngle -= desiredRotation.y * sensitivity;
         CameraAngle = Mathf.Clamp(CameraAngle, -clamp, clamp);
 
         Quaternion Rot = new Quaternion();
         Rot.eulerAngles = new Vector3(CameraAngle, 0, 0);
-        camera.transform.rotation = Rot;
+        camera.transform.localRotation = Rot;
     }
 
     void FixedUpdate()
@@ -102,7 +95,7 @@ public class RaycastMovement : MonoBehaviour
     {
         if (desiredMotion != Vector3.zero)
         {
-            Vector3 raycastPoint = transform.position + desiredMotion + transform.up;
+            Vector3 raycastPoint = transform.position + (desiredMotion * moveSpeed) + transform.up;
             RaycastHit raycastHit;
             if (Physics.Raycast(raycastPoint, -transform.up, out raycastHit, 10, mask))
             {   //Ground exists at that point.
