@@ -1,0 +1,22 @@
+Scripts: All C# scripts should go here. Once we have >10 scripts we can create sub-folders ford different categories.
+Music: Any sound files.
+Scenes: Any Unity Scenes.
+Unity Packages: Any resource packs that were taken from the unity store.
+	...DO NOT sort the package elements into folders since its important to know what is not our own work.
+
+Resources: This is a special file in Unity which MUST be named 'Resources'.
+	...Files in this folder can be acessed by unity much more easily at runtime so its good practice
+	...to put prefabs and some art assets in here.
+   - Visual Assets: Any art including UI, 3D models, materials, sprites and text fonts (create sub-folders if one of these is missing)
+   - Prefabs: Any prefab, or object you want to save.
+
+
+
+
+How Prefabs Work:
+A prefab is exactly the same as a GameObject except that it is stored in the assets folder instead of a scene.
+Functions like Instantiate and Spawn *can* use GameObjects within the scene, but in most cases it's better to use a prefab.
+Prefabs give you flexibility when copying objects: if an object is a copy of a prefab, changes can be made on one copy and applied
+...instantly to all copies by clicking on the 'overrides' tab at the top of the inspector.
+Unity has also recently implemented 'inhereted' prefabs, allowing you to create children of a prefab which will be updated when the
+...parent changes, but will only update copies of the child when it is changed.
