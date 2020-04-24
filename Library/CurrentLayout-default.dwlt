@@ -21,8 +21,9 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 364}
+  m_MinSize: {x: 875, y: 362}
   m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -45,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 364}
+  m_MinSize: {x: 875, y: 362}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -111,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 509, y: 314}
-  m_MaxSize: {x: 14004, y: 14044}
+  m_MinSize: {x: 507, y: 312}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 1361
+  controlID: 106
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,12 +135,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1372
+    width: 1365
     height: 947
-  m_MinSize: {x: 232, y: 314}
-  m_MaxSize: {x: 10002, y: 14044}
+  m_MinSize: {x: 231, y: 312}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 1362
+  controlID: 36
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,12 +160,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1372
+    width: 1365
     height: 670
-  m_MinSize: {x: 206, y: 42}
-  m_MaxSize: {x: 8006, y: 4022}
+  m_MinSize: {x: 203, y: 41}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 1363
+  controlID: 37
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,10 +183,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 184
+    width: 351
     height: 670
-  m_MinSize: {x: 102, y: 42}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 101, y: 41}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -201,17 +202,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 184
+    x: 351
     y: 0
-    width: 1188
+    width: 1014
     height: 670
-  m_MinSize: {x: 104, y: 42}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 102, y: 41}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
@@ -236,10 +237,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 670
-    width: 1372
+    width: 1365
     height: 277
-  m_MinSize: {x: 232, y: 272}
-  m_MaxSize: {x: 10002, y: 10022}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -262,12 +263,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1372
+    x: 1365
     y: 0
-    width: 548
+    width: 555
     height: 947
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -295,10 +296,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 184
+    x: 351
     y: 73
-    width: 1186
-    height: 651
+    width: 1012
+    height: 649
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: be7b4dc6f9bcf924cb38ac9dc6d65c21
@@ -310,9 +311,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.767687, y: 21.948233, z: -23.889557}
+    m_Target: {x: -14.392383, y: -0.8852393, z: -7.668093}
     speed: 2
-    m_Value: {x: -8.767687, y: 21.948233, z: -23.889557}
+    m_Value: {x: -14.392383, y: -0.8852393, z: -7.668093}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -320,6 +321,8 @@ MonoBehaviour:
     section: Shading Mode
   m_ValidateTrueMetals: 0
   m_DoValidateTrueMetals: 0
+  m_ExposureSliderValue: 0
+  m_ExposureSliderMax: 10
   m_SceneViewState:
     showFog: 0
     showMaterialUpdate: 0
@@ -327,27 +330,42 @@ MonoBehaviour:
     showFlares: 0
     showImageEffects: 0
     showParticleSystems: 0
-  grid:
+  m_Grid:
     xGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
     yGrid:
-      m_Target: 1
-      speed: 2
-      m_Value: 1
+      m_Fade:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
     zGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
+    m_ShowGrid: 1
+    m_GridAxis: 1
+    m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.25554588, y: 0.09898006, z: -0.02631052, w: -0.9613578}
+    m_Target: {x: 0.2152209, y: 0.08775351, z: -0.019413125, w: 0.97243524}
     speed: 2
-    m_Value: {x: -0.25410336, y: 0.09901933, z: -0.026161999, w: -0.96173924}
+    m_Value: {x: -0.21522091, y: -0.08775351, z: 0.019413127, w: -0.9724353}
   m_Size:
-    m_Target: 10
+    m_Target: 30.161053
     speed: 2
-    m_Value: 10
+    m_Value: 30.161053
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -365,7 +383,6 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
@@ -396,15 +413,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 184
-    height: 651
+    width: 350
+    height: 649
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 802ffefffc2ffeff5231feff
+      m_ExpandedIDs: ee4dfeff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -449,10 +466,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 169
-    y: 73
-    width: 1093
-    height: 656
+    x: 101
+    y: 81
+    width: 581
+    height: 643
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &15
 MonoBehaviour:
@@ -475,26 +492,35 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 184
+    x: 351
     y: 73
-    width: 1186
-    height: 651
+    width: 1012
+    height: 649
   m_ViewDataDictionary: {fileID: 0}
-  m_VSyncEnabled: 0
+  m_SerializedViewsNames: []
+  m_SerializedViewsValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1012, y: 628}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
   m_MaximizeOnPlay: 0
+  m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -593
-    m_HBaseRangeMax: 593
-    m_VBaseRangeMin: -317
-    m_VBaseRangeMax: 317
+    m_HBaseRangeMin: -506
+    m_HBaseRangeMax: 506
+    m_VBaseRangeMin: -324.5
+    m_VBaseRangeMax: 324.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -503,7 +529,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -511,30 +537,29 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 17
-      width: 1186
-      height: 634
+      y: 0
+      width: 1012
+      height: 649
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 593, y: 317}
+    m_Translation: {x: 506, y: 324.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -593
-      y: -317
-      width: 1186
-      height: 634
+      x: -506
+      y: -324.5
+      width: 1012
+      height: 649
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_TargetTexture: {fileID: 0}
-  m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1186, y: 651}
+  m_LastWindowPixelSize: {x: 1012, y: 649}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
   m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -558,8 +583,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 743
-    width: 1372
-    height: 258
+    width: 1364
+    height: 256
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -574,20 +599,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
-  m_StartGridSize: 72
+  m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: G:\Making\GameMaking\Projects\DP1-HD-Game-Progress-Env\DP1-HD-Game-Progress
+  m_LastProjectPath: G:\devprojectgit\DP1-HD-Game-Progress
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 2}
-    m_SelectedIDs: 588e0000
-    m_LastClickedID: 36440
-    m_ExpandedIDs: 00000000588e00006090000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: ea850000
+    m_LastClickedID: 34282
+    m_ExpandedIDs: 00000000da850000dc85000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -615,7 +640,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000588e000000ca9a3b
+    m_ExpandedIDs: 00000000da850000dc850000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -668,7 +693,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 72
+    m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &17
@@ -709,7 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 12070, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 260, y: 216}
+  m_MinSize: {x: 880, y: 216}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Profiler
@@ -738,300 +763,465 @@ MonoBehaviour:
     xOffset: 0
   m_Recording: 1
   m_ActiveNativePlatformSupportModule: 
-  m_ViewType: 0
   m_CurrentArea: 0
-  m_ShowInactiveDSPChains: 0
-  m_HighlightAudibleDSPChains: 1
-  m_DSPGraphZoomFactor: 1
-  m_CPUFrameDataHierarchyView:
-    m_CpuProfilerOptions: 1
-    m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_MultiColumnHeaderState:
-      m_Columns: []
-      m_VisibleColumns: 
-      m_SortedColumns: 
-    m_DetailedViewType: 0
-    m_DetailedViewSpliterState:
-      ID: 0
-      splitterInitialOffset: 0
-      currentActiveSplitter: 0
-      realSizes: 
-      relativeSizes: []
-      minSizes: 
-      maxSizes: 
-      lastTotalSize: 0
-      splitSize: 0
-      xOffset: 0
-    m_DetailedObjectsView:
-      m_TreeViewState:
-        scrollPos: {x: 0, y: 0}
-        m_SelectedIDs: 
-        m_LastClickedID: 0
-        m_ExpandedIDs: 
-        m_RenameOverlay:
-          m_UserAcceptedRename: 0
-          m_Name: 
-          m_OriginalName: 
-          m_EditFieldRect:
-            serializedVersion: 2
-            x: 0
-            y: 0
-            width: 0
-            height: 0
-          m_UserData: 0
-          m_IsWaitingForDelay: 0
-          m_IsRenaming: 0
-          m_OriginalEventType: 11
-          m_IsRenamingFilename: 0
-          m_ClientGUIView: {fileID: 0}
-        m_SearchString: 
-      m_MultiColumnHeaderState:
-        m_Columns: []
-        m_VisibleColumns: 
-        m_SortedColumns: 
-      m_VertSplit:
-        ID: 0
-        splitterInitialOffset: 0
-        currentActiveSplitter: 0
-        realSizes: 
-        relativeSizes: []
-        minSizes: 
-        maxSizes: 
-        lastTotalSize: 0
-        splitSize: 0
-        xOffset: 0
-    m_DetailedCallsView:
-      m_VertSplit:
-        ID: 0
-        splitterInitialOffset: 0
-        currentActiveSplitter: 0
-        realSizes: 
-        relativeSizes: []
-        minSizes: 
-        maxSizes: 
-        lastTotalSize: 0
-        splitSize: 0
-        xOffset: 0
-      m_CalleesTreeView:
-        m_ViewState:
-          scrollPos: {x: 0, y: 0}
-          m_SelectedIDs: 
-          m_LastClickedID: 0
-          m_ExpandedIDs: 
-          m_RenameOverlay:
-            m_UserAcceptedRename: 0
-            m_Name: 
-            m_OriginalName: 
-            m_EditFieldRect:
-              serializedVersion: 2
-              x: 0
-              y: 0
-              width: 0
-              height: 0
-            m_UserData: 0
-            m_IsWaitingForDelay: 0
-            m_IsRenaming: 0
-            m_OriginalEventType: 11
-            m_IsRenamingFilename: 0
-            m_ClientGUIView: {fileID: 0}
-          m_SearchString: 
-        m_ViewHeaderState:
-          m_Columns: []
-          m_VisibleColumns: 
-          m_SortedColumns: 
-      m_CallersTreeView:
-        m_ViewState:
-          scrollPos: {x: 0, y: 0}
-          m_SelectedIDs: 
-          m_LastClickedID: 0
-          m_ExpandedIDs: 
-          m_RenameOverlay:
-            m_UserAcceptedRename: 0
-            m_Name: 
-            m_OriginalName: 
-            m_EditFieldRect:
-              serializedVersion: 2
-              x: 0
-              y: 0
-              width: 0
-              height: 0
-            m_UserData: 0
-            m_IsWaitingForDelay: 0
-            m_IsRenaming: 0
-            m_OriginalEventType: 11
-            m_IsRenamingFilename: 0
-            m_ClientGUIView: {fileID: 0}
-          m_SearchString: 
-        m_ViewHeaderState:
-          m_Columns: []
-          m_VisibleColumns: 
-          m_SortedColumns: 
-  m_GPUFrameDataHierarchyView:
-    m_CpuProfilerOptions: 1
-    m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_MultiColumnHeaderState:
-      m_Columns: []
-      m_VisibleColumns: 
-      m_SortedColumns: 
-    m_DetailedViewType: 0
-    m_DetailedViewSpliterState:
-      ID: 0
-      splitterInitialOffset: 0
-      currentActiveSplitter: 0
-      realSizes: 
-      relativeSizes: []
-      minSizes: 
-      maxSizes: 
-      lastTotalSize: 0
-      splitSize: 0
-      xOffset: 0
-    m_DetailedObjectsView:
-      m_TreeViewState:
-        scrollPos: {x: 0, y: 0}
-        m_SelectedIDs: 
-        m_LastClickedID: 0
-        m_ExpandedIDs: 
-        m_RenameOverlay:
-          m_UserAcceptedRename: 0
-          m_Name: 
-          m_OriginalName: 
-          m_EditFieldRect:
-            serializedVersion: 2
-            x: 0
-            y: 0
-            width: 0
-            height: 0
-          m_UserData: 0
-          m_IsWaitingForDelay: 0
-          m_IsRenaming: 0
-          m_OriginalEventType: 11
-          m_IsRenamingFilename: 0
-          m_ClientGUIView: {fileID: 0}
-        m_SearchString: 
-      m_MultiColumnHeaderState:
-        m_Columns: []
-        m_VisibleColumns: 
-        m_SortedColumns: 
-      m_VertSplit:
-        ID: 0
-        splitterInitialOffset: 0
-        currentActiveSplitter: 0
-        realSizes: 
-        relativeSizes: []
-        minSizes: 
-        maxSizes: 
-        lastTotalSize: 0
-        splitSize: 0
-        xOffset: 0
-    m_DetailedCallsView:
-      m_VertSplit:
-        ID: 0
-        splitterInitialOffset: 0
-        currentActiveSplitter: 0
-        realSizes: 
-        relativeSizes: []
-        minSizes: 
-        maxSizes: 
-        lastTotalSize: 0
-        splitSize: 0
-        xOffset: 0
-      m_CalleesTreeView:
-        m_ViewState:
-          scrollPos: {x: 0, y: 0}
-          m_SelectedIDs: 
-          m_LastClickedID: 0
-          m_ExpandedIDs: 
-          m_RenameOverlay:
-            m_UserAcceptedRename: 0
-            m_Name: 
-            m_OriginalName: 
-            m_EditFieldRect:
-              serializedVersion: 2
-              x: 0
-              y: 0
-              width: 0
-              height: 0
-            m_UserData: 0
-            m_IsWaitingForDelay: 0
-            m_IsRenaming: 0
-            m_OriginalEventType: 11
-            m_IsRenamingFilename: 0
-            m_ClientGUIView: {fileID: 0}
-          m_SearchString: 
-        m_ViewHeaderState:
-          m_Columns: []
-          m_VisibleColumns: 
-          m_SortedColumns: 
-      m_CallersTreeView:
-        m_ViewState:
-          scrollPos: {x: 0, y: 0}
-          m_SelectedIDs: 
-          m_LastClickedID: 0
-          m_ExpandedIDs: 
-          m_RenameOverlay:
-            m_UserAcceptedRename: 0
-            m_Name: 
-            m_OriginalName: 
-            m_EditFieldRect:
-              serializedVersion: 2
-              x: 0
-              y: 0
-              width: 0
-              height: 0
-            m_UserData: 0
-            m_IsWaitingForDelay: 0
-            m_IsRenaming: 0
-            m_OriginalEventType: 11
-            m_IsRenamingFilename: 0
-            m_ClientGUIView: {fileID: 0}
-          m_SearchString: 
-        m_ViewHeaderState:
-          m_Columns: []
-          m_VisibleColumns: 
-          m_SortedColumns: 
+  m_ProfilerModules:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
+  - id: 9
+  - id: 10
+  - id: 11
+  - id: 12
   m_ClearOnPlay: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: CPUProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+        m_ViewType: 1
+        m_ProfilerViewFilteringOptions: 1
+        m_FrameDataHierarchyView:
+          m_Serialized: 0
+          m_TreeViewState:
+            scrollPos: {x: 0, y: 0}
+            m_SelectedIDs: 
+            m_LastClickedID: 0
+            m_ExpandedIDs: 
+            m_RenameOverlay:
+              m_UserAcceptedRename: 0
+              m_Name: 
+              m_OriginalName: 
+              m_EditFieldRect:
+                serializedVersion: 2
+                x: 0
+                y: 0
+                width: 0
+                height: 0
+              m_UserData: 0
+              m_IsWaitingForDelay: 0
+              m_IsRenaming: 0
+              m_OriginalEventType: 11
+              m_IsRenamingFilename: 0
+              m_ClientGUIView: {fileID: 0}
+            m_SearchString: 
+          m_MultiColumnHeaderState:
+            m_Columns: []
+            m_VisibleColumns: 
+            m_SortedColumns: 
+          m_ThreadIndex: 0
+          m_DetailedViewType: 0
+          m_DetailedViewSpliterState:
+            ID: 0
+            splitterInitialOffset: 0
+            currentActiveSplitter: 0
+            realSizes: 
+            relativeSizes: []
+            minSizes: 
+            maxSizes: 
+            lastTotalSize: 0
+            splitSize: 0
+            xOffset: 0
+          m_DetailedObjectsView:
+            m_SelectedID: 0
+            m_TreeViewState:
+              scrollPos: {x: 0, y: 0}
+              m_SelectedIDs: 
+              m_LastClickedID: 0
+              m_ExpandedIDs: 
+              m_RenameOverlay:
+                m_UserAcceptedRename: 0
+                m_Name: 
+                m_OriginalName: 
+                m_EditFieldRect:
+                  serializedVersion: 2
+                  x: 0
+                  y: 0
+                  width: 0
+                  height: 0
+                m_UserData: 0
+                m_IsWaitingForDelay: 0
+                m_IsRenaming: 0
+                m_OriginalEventType: 11
+                m_IsRenamingFilename: 0
+                m_ClientGUIView: {fileID: 0}
+              m_SearchString: 
+            m_MultiColumnHeaderState:
+              m_Columns: []
+              m_VisibleColumns: 
+              m_SortedColumns: 
+            m_VertSplit:
+              ID: 0
+              splitterInitialOffset: 0
+              currentActiveSplitter: 0
+              realSizes: 
+              relativeSizes: []
+              minSizes: 
+              maxSizes: 
+              lastTotalSize: 0
+              splitSize: 0
+              xOffset: 0
+          m_DetailedCallsView:
+            m_SelectedID: -1
+            m_VertSplit:
+              ID: 0
+              splitterInitialOffset: 0
+              currentActiveSplitter: 0
+              realSizes: 
+              relativeSizes: []
+              minSizes: 
+              maxSizes: 
+              lastTotalSize: 0
+              splitSize: 0
+              xOffset: 0
+            m_CalleesTreeView:
+              m_ViewState:
+                scrollPos: {x: 0, y: 0}
+                m_SelectedIDs: 
+                m_LastClickedID: 0
+                m_ExpandedIDs: 
+                m_RenameOverlay:
+                  m_UserAcceptedRename: 0
+                  m_Name: 
+                  m_OriginalName: 
+                  m_EditFieldRect:
+                    serializedVersion: 2
+                    x: 0
+                    y: 0
+                    width: 0
+                    height: 0
+                  m_UserData: 0
+                  m_IsWaitingForDelay: 0
+                  m_IsRenaming: 0
+                  m_OriginalEventType: 11
+                  m_IsRenamingFilename: 0
+                  m_ClientGUIView: {fileID: 0}
+                m_SearchString: 
+              m_ViewHeaderState:
+                m_Columns:
+                - width: 150
+                  sortedAscending: 1
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                m_VisibleColumns: 0000000001000000020000000300000004000000
+                m_SortedColumns: 03000000
+            m_CallersTreeView:
+              m_ViewState:
+                scrollPos: {x: 0, y: 0}
+                m_SelectedIDs: 
+                m_LastClickedID: 0
+                m_ExpandedIDs: 
+                m_RenameOverlay:
+                  m_UserAcceptedRename: 0
+                  m_Name: 
+                  m_OriginalName: 
+                  m_EditFieldRect:
+                    serializedVersion: 2
+                    x: 0
+                    y: 0
+                    width: 0
+                    height: 0
+                  m_UserData: 0
+                  m_IsWaitingForDelay: 0
+                  m_IsRenaming: 0
+                  m_OriginalEventType: 11
+                  m_IsRenamingFilename: 0
+                  m_ClientGUIView: {fileID: 0}
+                m_SearchString: 
+              m_ViewHeaderState:
+                m_Columns:
+                - width: 150
+                  sortedAscending: 1
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                m_VisibleColumns: 0000000001000000020000000300000004000000
+                m_SortedColumns: 03000000
+          m_ThreadName: Main Thread
+    00000001:
+      type: {class: GPUProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+        m_ViewType: 0
+        m_ProfilerViewFilteringOptions: 1
+        m_FrameDataHierarchyView:
+          m_Serialized: 0
+          m_TreeViewState:
+            scrollPos: {x: 0, y: 0}
+            m_SelectedIDs: 
+            m_LastClickedID: 0
+            m_ExpandedIDs: 
+            m_RenameOverlay:
+              m_UserAcceptedRename: 0
+              m_Name: 
+              m_OriginalName: 
+              m_EditFieldRect:
+                serializedVersion: 2
+                x: 0
+                y: 0
+                width: 0
+                height: 0
+              m_UserData: 0
+              m_IsWaitingForDelay: 0
+              m_IsRenaming: 0
+              m_OriginalEventType: 11
+              m_IsRenamingFilename: 0
+              m_ClientGUIView: {fileID: 0}
+            m_SearchString: 
+          m_MultiColumnHeaderState:
+            m_Columns: []
+            m_VisibleColumns: 
+            m_SortedColumns: 
+          m_ThreadIndex: 0
+          m_DetailedViewType: 0
+          m_DetailedViewSpliterState:
+            ID: 0
+            splitterInitialOffset: 0
+            currentActiveSplitter: 0
+            realSizes: 
+            relativeSizes: []
+            minSizes: 
+            maxSizes: 
+            lastTotalSize: 0
+            splitSize: 0
+            xOffset: 0
+          m_DetailedObjectsView:
+            m_SelectedID: 0
+            m_TreeViewState:
+              scrollPos: {x: 0, y: 0}
+              m_SelectedIDs: 
+              m_LastClickedID: 0
+              m_ExpandedIDs: 
+              m_RenameOverlay:
+                m_UserAcceptedRename: 0
+                m_Name: 
+                m_OriginalName: 
+                m_EditFieldRect:
+                  serializedVersion: 2
+                  x: 0
+                  y: 0
+                  width: 0
+                  height: 0
+                m_UserData: 0
+                m_IsWaitingForDelay: 0
+                m_IsRenaming: 0
+                m_OriginalEventType: 11
+                m_IsRenamingFilename: 0
+                m_ClientGUIView: {fileID: 0}
+              m_SearchString: 
+            m_MultiColumnHeaderState:
+              m_Columns: []
+              m_VisibleColumns: 
+              m_SortedColumns: 
+            m_VertSplit:
+              ID: 0
+              splitterInitialOffset: 0
+              currentActiveSplitter: 0
+              realSizes: 
+              relativeSizes: []
+              minSizes: 
+              maxSizes: 
+              lastTotalSize: 0
+              splitSize: 0
+              xOffset: 0
+          m_DetailedCallsView:
+            m_SelectedID: -1
+            m_VertSplit:
+              ID: 0
+              splitterInitialOffset: 0
+              currentActiveSplitter: 0
+              realSizes: 
+              relativeSizes: []
+              minSizes: 
+              maxSizes: 
+              lastTotalSize: 0
+              splitSize: 0
+              xOffset: 0
+            m_CalleesTreeView:
+              m_ViewState:
+                scrollPos: {x: 0, y: 0}
+                m_SelectedIDs: 
+                m_LastClickedID: 0
+                m_ExpandedIDs: 
+                m_RenameOverlay:
+                  m_UserAcceptedRename: 0
+                  m_Name: 
+                  m_OriginalName: 
+                  m_EditFieldRect:
+                    serializedVersion: 2
+                    x: 0
+                    y: 0
+                    width: 0
+                    height: 0
+                  m_UserData: 0
+                  m_IsWaitingForDelay: 0
+                  m_IsRenaming: 0
+                  m_OriginalEventType: 11
+                  m_IsRenamingFilename: 0
+                  m_ClientGUIView: {fileID: 0}
+                m_SearchString: 
+              m_ViewHeaderState:
+                m_Columns:
+                - width: 150
+                  sortedAscending: 1
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                m_VisibleColumns: 0000000001000000020000000300000004000000
+                m_SortedColumns: 03000000
+            m_CallersTreeView:
+              m_ViewState:
+                scrollPos: {x: 0, y: 0}
+                m_SelectedIDs: 
+                m_LastClickedID: 0
+                m_ExpandedIDs: 
+                m_RenameOverlay:
+                  m_UserAcceptedRename: 0
+                  m_Name: 
+                  m_OriginalName: 
+                  m_EditFieldRect:
+                    serializedVersion: 2
+                    x: 0
+                    y: 0
+                    width: 0
+                    height: 0
+                  m_UserData: 0
+                  m_IsWaitingForDelay: 0
+                  m_IsRenaming: 0
+                  m_OriginalEventType: 11
+                  m_IsRenamingFilename: 0
+                  m_ClientGUIView: {fileID: 0}
+                m_SearchString: 
+              m_ViewHeaderState:
+                m_Columns:
+                - width: 150
+                  sortedAscending: 1
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                - width: 60
+                  sortedAscending: 0
+                m_VisibleColumns: 0000000001000000020000000300000004000000
+                m_SortedColumns: 03000000
+          m_ThreadName: Main Thread
+    00000002:
+      type: {class: RenderingProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+    00000003:
+      type: {class: MemoryProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+        m_ViewSplit:
+          ID: 0
+          splitterInitialOffset: 0
+          currentActiveSplitter: -1
+          realSizes: 0000000000000000
+          relativeSizes:
+          - 0.7
+          - 0.3
+          minSizes: c201000032000000
+          maxSizes: 0000000000000000
+          lastTotalSize: 0
+          splitSize: 6
+          xOffset: 0
+    00000004:
+      type: {class: AudioProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+        m_ShowInactiveDSPChains: 0
+        m_HighlightAudibleDSPChains: 1
+        m_DSPGraphZoomFactor: 1
+    00000005:
+      type: {class: VideoProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+    00000006:
+      type: {class: PhysicsProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+    00000007:
+      type: {class: Physics2DProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+    00000008:
+      type: {class: NetworkingMessagesProfilerModule, ns: UnityEditorInternal.Profiling,
+        asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+    00000009:
+      type: {class: NetworkingOperationsProfilerModule, ns: UnityEditorInternal.Profiling,
+        asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+        m_NetworkSplit:
+          ID: 0
+          splitterInitialOffset: 0
+          currentActiveSplitter: -1
+          realSizes: 0000000000000000
+          relativeSizes:
+          - 0.2
+          - 0.8
+          minSizes: 6400000064000000
+          maxSizes: 0000000000000000
+          lastTotalSize: 0
+          splitSize: 6
+          xOffset: 0
+        msgNames:
+        - UserMessage
+        - ObjectDestroy
+        - ClientRpc
+        - ObjectSpawn
+        - Owner
+        - Command
+        - LocalPlayerTransform
+        - SyncEvent
+        - SyncVars
+        - SyncList
+        - ObjectSpawnScene
+        - NetworkInfo
+        - SpawnFinished
+        - ObjectHide
+        - CRC
+        - ClientAuthority
+    0000000A:
+      type: {class: UIProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+    0000000B:
+      type: {class: UIDetailsProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
+    0000000C:
+      type: {class: GlobalIlluminationProfilerModule, ns: UnityEditorInternal.Profiling,
+        asm: UnityEditor}
+      data:
+        m_PaneScroll: {x: 0, y: 0}
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1053,10 +1243,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1372
+    x: 1365
     y: 73
-    width: 546
-    height: 928
+    width: 554
+    height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
