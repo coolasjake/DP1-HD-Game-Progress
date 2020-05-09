@@ -9,8 +9,10 @@ public class FPSPlayerMovement : MonoBehaviour
 
     public float speed = 12f;
     public float gravity = -9.81f;
+    public float jumpHeight = 12f;
 
     public Transform groundcheck;
+
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
@@ -23,33 +25,27 @@ public class FPSPlayerMovement : MonoBehaviour
     void Update()
     {
         //This part of the code uses an ifcheck to see if the player is on the ground, if that is the case then the speed they are falling at will revert to normal.//
-      
-    }
-
-    void FixedUpdate()
-    {
-          isGrounded = Physics.CheckSphere(groundcheck.position, groundDistance, groundMask);
+        isGrounded = Physics.CheckSphere(groundcheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
-        {
+            {
             velocity.y = -2f;
-
-        }
-
-        if (Input.GetKeyDown("space") && isGrounded)
-        {
-            velocity.y = 15 * Time.deltaTime;
-        }
+            } 
 
         //float x controls side to side movement//
         float x = Input.GetAxis("Horizontal");
-
         //float z controls forward backward movement//
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x * speed + transform.forward * z * speed;
+        ///controls the movement update before jump & gravity are calculatred 
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(move * speed * Time.deltaTime);
 
-        controller.Move(move);
+        if (Input.GetKeyDown("space") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -1f * gravity);
+            Debug.Log(isGrounded);
+        }
 
         velocity.y += gravity * Time.deltaTime;
 
