@@ -7,6 +7,7 @@ public class PickUpObjects : MonoBehaviour {
     GameObject carriedObject;
     public float distance;
     public float smooth;
+    public LayerMask layer;
 
     // Start is called before the first frame update
     void Start()
@@ -47,16 +48,19 @@ public class PickUpObjects : MonoBehaviour {
 
             Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x, y));
             RaycastHit hit;
-            if(Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, distance, layer))
             {
-                PickUp p = hit.collider.GetComponent<PickUp>();
-                if (p != null)
+                Debug.Log(hit.transform.name);
+                if (hit.transform.CompareTag("Pickupable"))
                 {
+                    
+                    //PickUp p = hit.collider.GetComponent<PickUp>();
                     carrying = true;
-                    carriedObject = p.gameObject;
-                    p.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                    carriedObject = hit.transform.gameObject;
+                    hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                 }
             }
+                
         }
     }
 
