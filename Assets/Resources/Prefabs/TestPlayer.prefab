@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 403899285242327614}
   - component: {fileID: 403899285242327615}
   - component: {fileID: 403899285242327612}
-  - component: {fileID: 403899285242327608}
   m_Layer: 8
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -140,6 +139,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -178,21 +178,3 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &403899285242327608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403899285242327613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d227319277c3dab4587ac3837e047537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mask:
-    serializedVersion: 2
-    m_Bits: 1
-  sensitivity: 1
-  clamp: 90
-  moveSpeed: 0.1
