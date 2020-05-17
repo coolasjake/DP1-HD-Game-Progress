@@ -5106,6 +5106,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8375020761582379615, guid: 687840d047c401f48919a80354485292,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 8375020761725404992, guid: 687840d047c401f48919a80354485292,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14687,6 +14692,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   isGrounded: 0
+--- !u!114 &1186492760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186492758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b581d4963e642914f9d829354b58516c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 3
+  smooth: 10
+  layer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!143 &1186492761 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 8375020761725404995, guid: 687840d047c401f48919a80354485292,

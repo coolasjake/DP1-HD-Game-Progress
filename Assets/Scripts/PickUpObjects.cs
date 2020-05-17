@@ -50,7 +50,7 @@ public class PickUpObjects : MonoBehaviour {
 
             Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x, y));
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, distance, layer))
+            if (Physics.Raycast(ray, out hit, distance + 1, layer))
             {
                 Debug.Log(hit.transform.name);
                 if (hit.transform.CompareTag("Pickupable"))
