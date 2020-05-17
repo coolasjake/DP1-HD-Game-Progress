@@ -37,11 +37,13 @@ public class PickUpObjects : MonoBehaviour {
     void carry(GameObject o)
     {
         o.transform.position = Vector3.Lerp(o.transform.position, mainCamera.transform.position + mainCamera.transform.forward * distance, Time.deltaTime * smooth);
+        o.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        o.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
 
     void pickup()
     {
-        if(Input.GetMouseButton(1))
+        if(Input.GetMouseButtonDown(1))
         {
             int x = Screen.width / 2;
             int y = Screen.height / 2;
@@ -57,7 +59,8 @@ public class PickUpObjects : MonoBehaviour {
                     //PickUp p = hit.collider.GetComponent<PickUp>();
                     carrying = true;
                     carriedObject = hit.transform.gameObject;
-                    hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                    //hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                    hit.transform.gameObject.GetComponent<Rigidbody>().useGravity = false;
                 }
             }
                 
@@ -75,7 +78,8 @@ public class PickUpObjects : MonoBehaviour {
     void dropObject()
     {
         carrying = false;
-        carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        //carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
         carriedObject = null;
     }
 }
