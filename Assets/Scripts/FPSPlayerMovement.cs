@@ -8,7 +8,7 @@ public class FPSPlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
-    public float gravity = -9.81f;
+    public float gravity = -19.81f;
     public float jumpHeight = 12f;
 
     public Transform groundcheck;
@@ -31,7 +31,7 @@ public class FPSPlayerMovement : MonoBehaviour
             {
             velocity.y = -2f;
             } 
-
+        
         //float x controls side to side movement//
         float x = Input.GetAxis("Horizontal");
         //float z controls forward backward movement//
