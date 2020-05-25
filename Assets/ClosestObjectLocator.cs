@@ -17,23 +17,22 @@ public class ClosestObjectLocator : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        float neardistance = NearestObjectDistance();
+        float neardistance = NearestObjectDistance(transform.position + Camera.main.transform.forward * 3f);
         distanceOutput.text = neardistance.ToString();
         if (neardistance < 10) {
             Vector3 s = heatBar.localScale;
-            heatBar.transform.localScale = new Vector3((1 - (neardistance / 10f)) , s.y, s.z);
+            heatBar.transform.localScale = new Vector3((1 - (neardistance / 10f)), (1 - (neardistance / 10f)), s.z);
             Color c = heatBarColor.color;
-            heatBarColor.color = new Color(Mathf.Round(1 - (neardistance /10f)) , (neardistance / 10f), ((neardistance / 10f)) );
+            heatBarColor.color = new Color(1 - (neardistance /10f), 0, (neardistance / 10f) + 0.3f);
         }
     }
 
-    public float NearestObjectDistance()
+    public float NearestObjectDistance(Vector3 position)
     {
         GameObject[] gos;
         gos = GameObject.FindGameObjectsWithTag("Pickupable");
         GameObject closest = null;
         float distance = Mathf.Infinity;
-        Vector3 position = transform.position;
         foreach (GameObject go in gos)
         {
             Vector3 diff = go.transform.position - position;
