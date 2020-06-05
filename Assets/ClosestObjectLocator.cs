@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ClosestObjectLocator : MonoBehaviour
 {
-    public Text distanceOutput;
+    //public Text distanceOutput;
     public Transform heatBar;
     public Image heatBarColor;
 
@@ -18,7 +18,7 @@ public class ClosestObjectLocator : MonoBehaviour
     // Update is called once per frame
     void Update() {
         float neardistance = NearestObjectDistance(transform.position + Camera.main.transform.forward * 3f);
-        distanceOutput.text = neardistance.ToString();
+        //distanceOutput.text = neardistance.ToString();
         if (neardistance < 10) {
             Vector3 s = heatBar.localScale;
             heatBar.transform.localScale = new Vector3((1 - (neardistance / 10f)), (1 - (neardistance / 10f)), s.z);
