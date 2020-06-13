@@ -6,16 +6,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 public class Save : MonoBehaviour {
-
-    /// <summary> List of directories for the units in the players collection. </summary>
+    
     public List<GameObject> Cubes = new List<GameObject>();
     public bool load = false;
+    public static string cubeSaveName = "/cubePos.dat";
 
     // Use this for initialization
     void Awake() {
-        if (!load)
+        if (!File.Exists(Application.persistentDataPath + cubeSaveName))
             return;
-        List<Vector3> positions =  LoadCubeLocations();
+        List<Vector3> positions = LoadCubeLocations();
 
         for (int i = 0; i < Cubes.Count && i < positions.Count; ++i)
             Cubes[i].transform.position = positions[i];
@@ -31,7 +31,7 @@ public class Save : MonoBehaviour {
 
 	public static void SaveCubeLocations (List<Vector3> CubeLocations) {
 		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream file = File.Create (Application.persistentDataPath + "/saveData.dat");
+		FileStream file = File.Create (Application.persistentDataPath + cubeSaveName);
 
         List<SaveVect3> positions = new List<SaveVect3>();
 
@@ -50,10 +50,10 @@ public class Save : MonoBehaviour {
 
     public static List<Vector3> LoadCubeLocations()
     {
-        if (File.Exists(Application.persistentDataPath + "/saveData.dat"))
+        if (File.Exists(Application.persistentDataPath + cubeSaveName))
         {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "/saveData.dat", FileMode.Open);
+        FileStream file = File.Open(Application.persistentDataPath + cubeSaveName, FileMode.Open);
         SaveData data = (SaveData)bf.Deserialize(file);
         file.Close();
 
@@ -71,7 +71,6 @@ public class Save : MonoBehaviour {
 
     void OnApplicationQuit()
     {
-        Debug.Log("Saving");
         SaveCubeLocations(Cubes);
     }
 }
