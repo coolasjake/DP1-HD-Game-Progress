@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class PickUpObjects : MonoBehaviour { 
-    GameObject mainCamera;
-    bool carrying;
-    GameObject carriedObject;
+[RequireComponent(typeof(FPSPlayerController))]
+public class PickUpObjects : MonoBehaviour
+{
+    private FPSPlayerController controller;
+
+    private bool carrying;
+    private GameObject carriedObject;
     public float distance;
     public float smooth;
     public LayerMask layer;
@@ -15,7 +18,7 @@ public class PickUpObjects : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = GameObject.FindWithTag("MainCamera");
+        controller = GetComponent<FPSPlayerController>();
     }
 
     // Update is called once per frame
@@ -49,7 +52,7 @@ public class PickUpObjects : MonoBehaviour {
         int x = Screen.width / 2;
         int y = Screen.height / 2;
 
-        Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x, y));
+        Ray ray = controller.mainCamera.ScreenPointToRay(new Vector3(x, y));
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, distance + 1, layer))
         {
@@ -73,7 +76,8 @@ public class PickUpObjects : MonoBehaviour {
 
     void carry(GameObject o)
     {
-        o.transform.position = Vector3.Lerp(o.transform.position, mainCamera.transform.position + mainCamera.transform.forward * distance, Time.deltaTime * smooth);
+        o.transform.position = Vector3.Lerp(o.transform.position,
+            controller.mainCamera.transform.position+ controller.mainCamera.transform.forward * distance, Time.deltaTime * smooth);
         o.GetComponent<Rigidbody>().velocity = Vector3.zero;
         o.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
@@ -85,7 +89,7 @@ public class PickUpObjects : MonoBehaviour {
             int x = Screen.width / 2;
             int y = Screen.height / 2;
 
-            Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x, y));
+            Ray ray = controller.mainCamera.ScreenPointToRay(new Vector3(x, y));
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, distance + 1, layer))
             {

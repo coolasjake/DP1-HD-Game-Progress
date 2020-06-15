@@ -7,18 +7,36 @@ using System.IO;
 
 public class Save : MonoBehaviour {
     
-    public List<GameObject> Cubes = new List<GameObject>();
+    public List<GameObject> cubes = new List<GameObject>();
     public bool load = false;
     public static string cubeSaveName = "/cubePos.dat";
+
+    private List<Vector3> defaultPositions = new List<Vector3>();
 
     // Use this for initialization
     void Awake() {
         if (!File.Exists(Application.persistentDataPath + cubeSaveName))
             return;
+
+        if (cubes.Count == 0)
+        {
+            foreach (MusicPulse c in GetComponentsInChildren<MusicPulse>())
+                cubes.Add(c.gameObject);
+        }
+
         List<Vector3> positions = LoadCubeLocations();
 
-        for (int i = 0; i < Cubes.Count && i < positions.Count; ++i)
-            Cubes[i].transform.position = positions[i];
+        for (int i = 0; i < cubes.Count && i < positions.Count; ++i)
+        {
+            defaultPositions.Add(cubes[i].transform.position);
+            cubes[i].transform.position = positions[i];
+        }
+    }
+
+    public void ResetCubes()
+    {
+        for (int i = 0; i < cubes.Count && i < defaultPositions.Count; ++i)
+            cubes[i].transform.position = defaultPositions[i];
     }
 
     public static void SaveCubeLocations(List<GameObject> CubeList)
@@ -71,7 +89,7 @@ public class Save : MonoBehaviour {
 
     void OnApplicationQuit()
     {
-        SaveCubeLocations(Cubes);
+        SaveCubeLocations(cubes);
     }
 }
 
