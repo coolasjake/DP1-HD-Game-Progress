@@ -237,8 +237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 131, y: -180}
-  m_SizeDelta: {x: 200, y: 40}
+  m_AnchoredPosition: {x: 162.89, y: -180}
+  m_SizeDelta: {x: 263.78748, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9800097
 MonoBehaviour:
@@ -11855,8 +11855,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 698898103}
-        m_MethodName: ResetCubes
+      - m_Target: {fileID: 1959345296}
+        m_MethodName: ButtonReset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15242,7 +15242,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dummy
+  m_Text: RESET CUBES
 --- !u!222 &988901896
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15528,8 +15528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 131, y: -80}
-  m_SizeDelta: {x: 200, y: 40}
+  m_AnchoredPosition: {x: 162.89, y: -80}
+  m_SizeDelta: {x: 263.78748, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1001240078
 MonoBehaviour:
@@ -17433,8 +17433,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 131, y: -130}
-  m_SizeDelta: {x: 200, y: 40}
+  m_AnchoredPosition: {x: 162.89, y: -130}
+  m_SizeDelta: {x: 263.78748, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126980394
 MonoBehaviour:
@@ -17479,8 +17479,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 698898103}
-        m_MethodName: ResetCubes
+      - m_Target: {fileID: 1959345296}
+        m_MethodName: ResetPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18904,7 +18904,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dummy
+  m_Text: RESET PLAYER
 --- !u!222 &1210329769
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25841,8 +25841,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 698898103}
-        m_MethodName: ResetCubes
+      - m_Target: {fileID: 1959345295}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30963,6 +30963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuCanvas: {fileID: 2053575045}
   optionsMenuCanvas: {fileID: 1488337702}
+  resetMenuCanvas: {fileID: 1334477739}
   UICanvas: {fileID: 739724030}
   transitionCamera: {fileID: 1143700935}
   player: {fileID: 949549974}
