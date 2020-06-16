@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
-    public Canvas menuCanvas;
+    public Canvas mainMenuCanvas;
+    public Canvas optionsMenuCanvas;
+    public Canvas resetMenuCanvas;
     public Canvas UICanvas;
     public Camera transitionCamera;
     public FPSPlayerController player;
-    private bool inMenu = true;
-    private bool inTransition = false;
-    private Vector3 cameraPos = Vector3.zero;
-    private Quaternion cameraRot = new Quaternion();
 
-    // Start is called before the first frame update
+    public Transform pointMainMenu;
+    public Transform pointOptions;
+    public Transform pointReset;
+
+    private bool inMainMenu = true;
+    private bool inGameplay = false;
+    private bool inTransition = false;
+    private Vector3 defaultPlayerPos = Vector3.zero;
+    
     void Awake()
     {
-        cameraPos = transitionCamera.transform.position;
-        cameraRot = transitionCamera.transform.rotation;
+        transitionCamera.transform.position = pointMainMenu.position;
+        transitionCamera.transform.rotation = pointMainMenu.rotation;
+
+        defaultPlayerPos = player.transform.position;
     }
 
     void Update()
@@ -28,13 +36,13 @@ public class MenuController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && !inTransition)
         {
-            if (!inMenu)
-                Pause();
+            if (inMainMenu)
+                Play();
             else
-                ButtonPlay();
+                ToMainMenu();
         }
 
-        if (!inMenu && Input.GetMouseButtonDown(0))
+        if (inGameplay && Input.GetMouseButtonDown(0))
         {
             if (Cursor.visible)
             {
@@ -44,21 +52,80 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    public void ButtonPlay()
+    public void Play()
     {
-        menuCanvas.gameObject.SetActive(false);
-        UICanvas.gameObject.SetActive(true);
+        StartCoroutine(CameraTransitionIn());
+    }
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+    public void ToMainMenu()
+    {
+        inMainMenu = true;
+        StartCoroutine(CameraTransitionTo(pointMainMenu, mainMenuCanvas));
+    }
+    
+    public void ButtonOptions()
+    {
+        inMainMenu = false;
 
+        StartCoroutine(CameraTransitionTo(pointOptions, optionsMenuCanvas));
+    }
+
+    public void ButtonReset()
+    {
+        inMainMenu = false;
+
+        StartCoroutine(CameraTransitionTo(pointReset, resetMenuCanvas));
+    }
+
+    public void ButtonExit()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.ExitPlaymode();
+    }
+
+    public void ResetPlayer()
+    {
+        player.transform.position = defaultPlayerPos;
+    }
+
+    private IEnumerator CameraTransitionTo(Transform point, Canvas UItoActivate)
+    {
+        transitionCamera.gameObject.SetActive(true);
+        player.gameObject.SetActive(false);
+
+        transitionCamera.transform.SetParent(null);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        
+        inGameplay = false;
         inTransition = true;
 
-        StartCoroutine(CameraTransitionIn());
+        DeactivateCanvases();
+
+        float i = 1;
+        while (i > 0)
+        {
+            transitionCamera.transform.position = Vector3.Lerp(transitionCamera.transform.position, point.position, (1f - i) / 15);
+            transitionCamera.transform.rotation = Quaternion.Lerp(transitionCamera.transform.rotation, point.rotation, (1f - i) / 15);
+            i -= Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        UItoActivate.gameObject.SetActive(true);
+
+        inTransition = false;
     }
 
     private IEnumerator CameraTransitionIn()
     {
+        inTransition = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        DeactivateCanvases();
+
         float i = 1;
         while (i > 0)
         {
@@ -71,57 +138,23 @@ public class MenuController : MonoBehaviour
         transitionCamera.transform.position = player.mainCamera.transform.position;
         transitionCamera.transform.rotation = player.mainCamera.transform.rotation;
 
+        transitionCamera.transform.SetParent(player.transform);
+
         transitionCamera.gameObject.SetActive(false);
         player.gameObject.SetActive(true);
 
-        inMenu = false;
+        UICanvas.gameObject.SetActive(true);
+
+        inMainMenu = false;
+        inGameplay = true;
         inTransition = false;
     }
 
-    public void Pause()
+    private void DeactivateCanvases()
     {
-        inMenu = true;
-
-        transitionCamera.gameObject.SetActive(true);
-        player.gameObject.SetActive(false);
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
-        inTransition = true;
-
+        mainMenuCanvas.gameObject.SetActive(false);
         UICanvas.gameObject.SetActive(false);
-
-        StartCoroutine(CameraTransitionOut());
-    }
-
-    private IEnumerator CameraTransitionOut()
-    {
-        transitionCamera.transform.position = player.mainCamera.transform.position;
-        transitionCamera.transform.rotation = player.mainCamera.transform.rotation;
-
-        float i = 1;
-        while (i > 0)
-        {
-            transitionCamera.transform.position = Vector3.Lerp(transitionCamera.transform.position, cameraPos, (1f - i) / 15);
-            transitionCamera.transform.rotation = Quaternion.Lerp(transitionCamera.transform.rotation, cameraRot, (1f - i) / 15);
-            i -= Time.deltaTime;
-            yield return new WaitForEndOfFrame();
-        }
-
-        menuCanvas.gameObject.SetActive(true);
-
-        inTransition = false;
-    }
-
-    public void ButtonOptions()
-    {
-
-    }
-
-    public void ButtonExit()
-    {
-        Application.Quit();
-        UnityEditor.EditorApplication.ExitPlaymode();
+        optionsMenuCanvas.gameObject.SetActive(false);
+        resetMenuCanvas.gameObject.SetActive(false);
     }
 }
