@@ -5,13 +5,18 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-public class Save : MonoBehaviour {
+public class SoundObjectsManager : MonoBehaviour {
     
     public List<GameObject> cubes = new List<GameObject>();
     public bool load = false;
     public static string cubeSaveName = "/cubePos.dat";
 
     private List<Vector3> defaultPositions = new List<Vector3>();
+
+    private float minRangeLimit = 0;
+    private float minAudioDistance = 0;
+    private float maxAudioDistance = 100;
+    private float maxRangeLimit = 100;
 
     // Use this for initialization
     void Awake() {
@@ -37,6 +42,24 @@ public class Save : MonoBehaviour {
     {
         for (int i = 0; i < cubes.Count && i < defaultPositions.Count; ++i)
             cubes[i].transform.position = defaultPositions[i];
+    }
+
+    public void SetMinDist(float newMinDist)
+    {
+        minAudioDistance = newMinDist; //Mathf.Clamp(newMinDist, minRangeLimit, maxAudioDistance);
+        foreach (GameObject cube in cubes)
+        {
+            cube.GetComponent<AudioSource>().minDistance = minAudioDistance;
+        }
+    }
+
+    public void SetMaxDist(float newMaxDist)
+    {
+        maxAudioDistance = newMaxDist; //Mathf.Clamp(newMinDist, minRangeLimit, maxAudioDistance);
+        foreach (GameObject cube in cubes)
+        {
+            cube.GetComponent<AudioSource>().maxDistance = maxAudioDistance;
+        }
     }
 
     public static void SaveCubeLocations(List<GameObject> CubeList)
