@@ -115,7 +115,7 @@ public class MenuController : MonoBehaviour
     public void ButtonExit()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.ExitPlaymode();
+        //UnityEditor.EditorApplication.ExitPlaymode();
     }
 
     public void ResetPlayer()
