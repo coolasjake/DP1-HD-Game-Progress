@@ -41,7 +41,7 @@ public class PickUpObjects : MonoBehaviour
     {
         if (targetObj != null)
         {
-            targetObj.GetComponent<Renderer>().material = normalMat;
+            targetObj.GetComponentInChildren<Renderer>().material = normalMat;
         }
 
         if (carrying)
@@ -61,8 +61,8 @@ public class PickUpObjects : MonoBehaviour
             {
 
                 targetObj = hit.transform;
-                normalMat = targetObj.GetComponent<Renderer>().material;
-                targetObj.GetComponent<Renderer>().material = highlightMat;
+                normalMat = targetObj.GetComponentInChildren<Renderer>().material;
+                targetObj.GetComponentInChildren<Renderer>().material = highlightMat;
 
             }
         }
